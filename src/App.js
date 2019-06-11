@@ -16,7 +16,7 @@ class App extends Component {
         'Access-Control-Allow-Origin':'*',
       }
     };
-    fetch("https://localhost:44338/api/Result", requestOptions)
+    fetch("http://apicore/api/Result", requestOptions)
       .then(res => res.json())
       .then(
         (result) => this.atualizarDados(result),
@@ -46,7 +46,7 @@ class App extends Component {
       
       viagensDados.unshift([
         { type: 'string', id: 'Betoneira' },
-        { type: 'string', id: 'Cliente' },
+        { type: 'string', id: 'Viagem' },
         { type: 'date', id: 'Start' },
         { type: 'date', id: 'End' },
         { role: "tooltip", type: "string", 'p': {'html': true} }
@@ -57,7 +57,8 @@ class App extends Component {
               <Chart
                 key={betoneira.betoneira}
                 width={'100%'}
-                height={'200px'}
+                height={'500px'}
+                
                 chartType="Timeline"
                 loader={<div>Loading Chart</div>}
                 data={
@@ -68,7 +69,8 @@ class App extends Component {
                     timeline: { showRowLabels: false },
                     avoidOverlappingGridLines: false,
                     legend: { position: 'none' },
-                    tooltip: { isHtml: true }
+                    tooltip: { isHtml: true },
+                    vAxis: { minValue: 12000, maxValue: 12000 }
                   }
                 }
                 rootProps={{ 'data-testid': '9' }}

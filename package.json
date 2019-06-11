@@ -2,6 +2,7 @@
   "name": "data-viewer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://www.artigosbpo.br/artigosbpo.app",
   "dependencies": {
     "d3-scale": "3.0.0",
     "d3-selection": "^1.4.0",
