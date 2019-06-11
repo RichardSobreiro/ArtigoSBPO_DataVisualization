@@ -1,6 +1,6 @@
 Para utilização siga os passos abaixo:
 
-1 - Instale uma versão instável do solver IBM ILOG CPLEX;
+1 - Instale uma versão do solver IBM ILOG CPLEX;
 
 2 - Clone o repositório https://github.com/RichardSobreiro/ArtigoSBPO e execute o projeto API.ArtigoSBPO;
 
